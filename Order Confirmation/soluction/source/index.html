@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Loop 1 - Step 3</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!--
+    Hints:
+
+    1.
+    Hover animation for the icon uses box-shadow instead of border with opacity
+    as it doesn't move the element when its value is changed, so we don't have to move it back manually.
+
+    2.
+    Absolute positioning the image of the bicycle as a separate block should help you maintain the code in the future.
+    The code will be more likely to break after adding new content if it is rendered using background for the whole card.
+
+  -->
+
+  <div class="root">
+    <div class="card">
+      <div class="card__inner">
+        <div class="card__top">
+          <div class="card__title">
+            SimpleWheels
+          </div>
+          <a href="#account" class="card__account">
+            <img src="./img/account.svg" alt="" class="card__account-icon" />
+          </a>
+        </div>
+        <div class="card__subtitle">
+          Thanks for your order #2357654, your package will be on it's way shortly.
+        </div>
+
+        <div class="order card__order">
+          <div class="order__item">
+            <div class="order__name">
+              Chapelli Vintage Single Speed
+            </div>
+            <div class="order__price">
+              $317
+            </div>
+          </div>
+          <div class="order__item">
+            <div class="order__name">
+              Castelli Arenberg Gel Gloves
+            </div>
+            <div class="order__price">
+              $39
+            </div>
+          </div>
+          <div class="order__item order__item_total">
+            <div class="order__name">
+              Total
+            </div>
+            <div class="order__price">
+              $356
+            </div>
+          </div>
+        </div>
+      </div>  
+
+      <div class="card__background"></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Messager - Step 4</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="container">
+  <div class="chat">
+    <header class="header">
+      <h1 class="heading-1">Mark Zuckerberg</h1>
+      <button class="btn" aria-labelledby="close">
+        <svg  height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          <path d="M0 0h24v24H0z" fill="none"/>
+      </svg>
+        <span id="close" hidden>close chat</span>
+      </button>
+    </header>
+    <main class="conversation">
+      <div class="day">
+        <hr>
+        <span>Today</span>
+        <hr>
+      </div>
+      <div class="convertation__message">
+          <div class="message-send message">
+            <time class="message-send--time">10:30</time>
+            <div class="message-send__content">
+                <p class="message-send__content--text">Hi Mark! I made a new design for your messager App</p>
+            </div>
+          </div>
+          <div class="message-response message">
+            <time class="message-response--time">10:57</time>
+            <div class="message-response__content">
+                <p class="message-response__content--text">Yo! Send it  to my assistant and we'll review it during the year.</p>
+            </div>
+          </div>
+          <div class="message-send message">
+            <time class="message-send--time">11:03</time>
+            <div class="message-send__content">
+                <p class="message-send__content--text">But Mark...</p>
+            </div>
+          </div>
+          <div class="message-blocked message">
+            <div class="message-blocked__content">
+              <p class="message-blocked__content--text">You were blocked by the user.</p>
+          </div>
+          </div>
+      </div>
+
+      <form action="#" class="form">
+          <div class="input-group">
+            <textarea placeholder="Enter your message"></textarea>
+            <button class="btn--send" type="submit">
+              Send
+            </button>
+          </div>
+      </form>
+    </main>
+  </div>
+</body>
+</html>

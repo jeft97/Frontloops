@@ -1,0 +1,232 @@
+:root{
+    --clr-primary:#3b8acf;
+    --clr-line:#d3e6f4;
+    --clr-grey:#adadad;
+    --clr-white:#fff;
+    --clr-black:#000;
+    --clr-black-light:#1c1c1c;
+
+    --font-f-default:"Roboto", sans-serif;
+    --font-f-display:"Prompt", sans-serif;
+}
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font-f-default);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.u-clr-grey{color: var(--clr-grey) !important;}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+
+    background-image: url(../img/background.jpg);
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    padding: 0 3rem;
+}
+
+.boarding-pass{
+    width: min(100%, 50rem);
+    min-height:35rem;
+    background-color: var(--clr-white);
+    border-radius: .5rem;
+    padding: 4rem;
+
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: 1fr;
+    grid-row-gap: 3rem;
+
+}
+
+.boarding-pass__route{
+    grid-row: 1/2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.line{
+    display: block;
+    width: 3rem;
+    height: .6rem;
+    background-color: var(--clr-line);
+    border: none;
+}
+.departure,
+.arrive{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+.departure--abbreviation,
+.arrive--abbreviation{
+    font-family: var(--font-f-display);
+    font-size: 6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--clr-primary);
+    
+}
+
+.departure--name,
+.arrive--name{
+    font-size: 1.8rem;
+    margin-top: -2rem;
+    color: var(--clr-grey);
+}
+.arrive--name{
+    align-self: flex-end;
+}
+
+.checkin{
+    grid-row: 2/3;
+
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: 1fr;
+    grid-row-gap: 4rem;
+
+}
+
+
+.checkin__info{
+    grid-row: 1/2;
+    grid-column: 1/4;
+
+    display: flex;
+    justify-content: space-between;
+}
+.checkin__info--flight,
+.checkin__info--gate,
+.checkin__info--seat{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+.number{
+    font-size: 1.8rem;
+    color: var(--clr-black-light);
+}
+
+.checkin__info--seat{
+    margin-right: 9rem;
+}
+.checkin__description{
+    grid-row: 2/3;
+    grid-column: 1/span 4;
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
+}
+
+.checkin__description--passeger{
+    grid-row: 1/span 2;
+    grid-column: 1/span 1;
+}
+
+.checkin__description--class{
+    grid-row: 2/span 3;
+    grid-column: 1/span 1;
+}
+.checkin__description--qrcode{
+    grid-row: 1/ -1;
+    grid-column: 2/span 2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.checkin__description--date{
+   
+    grid-row: 3/span 4;
+    grid-column: 1/span 1;
+    
+    align-self: flex-end;
+   
+}
+
+
+.checkin__description--qrcode,
+.checkin__description--class,
+.checkin__description--passeger,
+.checkin__description--date{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+   
+}
+.checkin__description--qrcode img{
+    width: 100%;
+}
+.name,
+.time{
+    color: var(--clr-black-light);
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+@media only screen and (max-width:29em) {
+    html{
+        font-size: 52%;
+    }
+
+    .checkin__info--seat{
+        margin-right: 0;
+    }
+    .checkin__description{
+        grid-template-rows: min-content 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap:3rem;
+       
+    }
+
+    .checkin__description--qrcode{
+        grid-row: 2/ span 3;
+        grid-column: 1/span 3;
+    }
+    .checkin__description--class{
+        grid-row: 1 /span 2;
+        grid-column: 2/ span 3;
+        margin-left: 3rem;
+
+    }
+    .checkin__description--date{
+        grid-row: 1 / 2;
+        grid-column: 3/ span 4;
+    }
+    .boarding-pass{
+        padding: 4rem 2rem;
+    }
+    .checkin__description--qrcode img{
+        width: 100%;
+        object-fit: cover;
+    }
+    
+}

@@ -1,0 +1,121 @@
+:root{
+   
+   --color-primary:#6064ca;
+    --bg-color-container:#789ace;
+
+    --color-white:#fff;
+    --color-black:#000;
+    --color-grey:#f6f6f6;
+    --color-grey-light:#fefefe;
+    --color-grey-dark:#afafb2;
+
+    --font-primary:Roboto, sans-serif;
+    --font-wgt-default:400;
+    --font-size-default:1.6rem;
+
+    --grid-width:100rem;
+
+}
+
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--font-primary);
+    font-weight: var(--font-wgt-default);
+    font-size: var(--font-size-default);
+    color: var(--color-grey-dark);
+    line-height: 1.4;
+}
+
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: var(--bg-color-container);
+
+    display: grid;
+    align-content: center;
+}
+
+
+.c-pricings-plans{
+    width: min(100%, var(--grid-width));
+    height: min-content;
+    margin: 0 auto;
+    padding:2rem;
+    border-radius: .5rem;
+    box-shadow: 0 .6rem 10rem rgba(0, 0, 0, .2);
+    background-color: var(--color-white);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    column-gap: 1.5rem;
+}
+
+.c-pricing-plan{
+    text-align: center;
+    padding: 2.5rem 2rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all .2s;
+}
+.c-pricing-plan:hover{
+    background-color: var(--color-grey);
+}
+
+.c-pricing-plan > *:not(:last-child){
+    margin-bottom: 1.5rem;
+}
+
+.c-pricing-plan__icon{
+    width: 8rem;
+    height: 8rem;
+}
+.c-pricing-plan__title{
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: var(--color-primary);
+}
+.c-pricing-plan__text{
+  font-size: 1.5rem;
+
+}
+.c-pricing-plan__price{
+    color: var(--color-primary);
+    font-size: 3rem;
+}
+
+.c-pricing-plan__price sup{
+    font-size: 1.6rem;
+}
+.c-pricing-plan__price span{
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+
+/*media query*/
+
+@media only screen and (max-width:21em){
+    html{
+        font-size: 50%;
+    }
+
+    .c-pricings-plans,
+    .container{
+        padding: 1rem;
+    }
+}

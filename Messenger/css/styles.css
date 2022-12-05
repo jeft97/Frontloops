@@ -1,0 +1,252 @@
+:root{
+    --color-primary:#6a96d8;
+    --color-primary-dark:#8aa9c5;
+    --color-primary-light:#e6edf6;
+    --color-secondary:#ffc2c1;
+    
+    --color-grey-light:#e9e9e9;
+    --color-grey:#c8c8c8;
+    --color-grey-light-2:#f2f2f2;
+
+    --color-white:#fff;
+    --color-black:#000;
+}
+
+
+*,
+*::after,
+*::before{
+    margin:0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family:"Roboto", serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.4;
+}
+
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+    display: grid;
+    place-items: center;
+
+    padding: 0 2rem;
+}
+
+.chat{
+    width: min(100%,45rem);
+    min-height: 45rem;
+    background-color: var(--color-white);
+    
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+    background-color: var(--color-primary);
+    
+}
+
+
+
+.heading-1{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: var(--color-white);
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    transform: translateX(2rem);
+}
+
+.heading-1::after{
+    content: "";
+    position: absolute;
+    left: -2rem;
+    width: .8rem;
+    height: .8rem;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    
+}
+
+.btn{
+    appearance: none;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn svg{
+    fill: var(--color-grey-light);
+    transition: all .2s;
+}
+.btn svg:hover{
+    fill: var(--color-white);
+}
+
+.conversation{
+    padding: 3rem 3rem 2rem 3rem;
+    
+}
+
+.convertation__message{
+    padding: 2rem 0;
+}
+
+
+.day{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--color-grey-light);
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    
+}
+.day hr{
+    display: block;
+    width: 50%;
+    height: .1rem;
+    color: var(--color-grey-light);
+}
+.convertation__message{
+    font-size: 1.4rem;
+    border-bottom: 1.5px solid var(--color-grey-light);
+}
+
+.message-send,
+.message-response{
+   display: flex;
+   flex-direction: column;
+}
+
+.message-send--time,
+.message-response--time{
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+    color: var(--color-grey);
+}
+.message-send__content{
+    width: 70%;
+    max-width: fit-content;/*importante*/
+    background-color: var(--color-primary-light);
+    padding: .8rem 1rem;
+    color: var(--color-black);
+
+    position: relative;
+   
+
+}
+.message-response,
+.message-blocked{
+    display: grid;
+    place-items: end;
+}
+.message-response__content{
+    
+    width: 70%;
+    max-width: fit-content;/*importante*/
+    background-color: var(--color-grey-light-2);
+    padding: .8rem 1rem;
+    color: var(--color-black);
+
+    position: relative;
+}
+
+.message-blocked__content{
+    width: 70%;
+    max-width: fit-content;/*importante*/
+    background-color: var(--color-secondary);
+    padding: .8rem 1rem;
+    color: var(--color-black);
+}
+.message-response__content::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    right: -1rem;
+    top: -1.5rem;
+    background-color: var(--color-grey-light-2);
+    clip-path: polygon(50% 41%, 9% 41%, 40% 78%);
+    transform: translateY(-.1rem) rotate(-465deg);
+}
+
+
+.message-send__content::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    left: -.7rem;
+    top: -1.2rem;
+    background-color: var(--color-primary-light);
+
+    clip-path: polygon(50% 41%, 9% 41%, 40% 78%);
+    transform: translateY(-.03rem) rotate(1deg);
+
+}
+
+.message:not(:last-child){
+    margin-bottom: 1rem;
+}
+
+.input-group{
+    display: flex;
+    gap: .8rem;
+    height: 4rem;
+
+}
+
+.btn--send{
+    align-self: center;
+    appearance: none;
+    outline: none;
+    border: none;
+
+    background-color: transparent;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    cursor: pointer;
+
+}
+
+.form{
+    padding: 1rem 0;
+}
+textarea{
+    width: 100%;
+    background-color: transparent;
+    appearance: none;
+    outline: none;
+    border: 0;
+    resize: none;
+    font-size: 1.5rem;
+    font-family: inherit;
+    font-weight: inherit;
+
+    padding: 1.2rem 0;
+    overflow-y: hidden;
+    
+}

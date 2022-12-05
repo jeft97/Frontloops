@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Payment Screen">
+  <title>Loop 1 - Payment Screen</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="wrapper">
+      <div class="payment">
+          <div class="dots">
+              <span class="dot dot--active">&nbsp;</span>
+              <span class="dot">&nbsp;</span>
+              <span class="dot">&nbsp;</span>
+          </div>
+          <h2 class="heading-2">Payment Method</h2>
+          <ul>
+              <li class="payment__method">
+                  <a href="#">
+                      <svg class="payment__method--icon">
+                          <use xlink:href="img/sprite.svg#visa"></use>
+                      </svg>
+                      <h3 class="payment__method--name">Visa</h3>
+                  </a>
+              </li>
+              <li class="payment__method payment__method--active">
+                  <a href="#">
+                      <svg class="payment__method--icon">
+                          <use xlink:href="img/sprite.svg#mastercard"></use>
+                      </svg>
+                      <h3 class="payment__method--name">Mastercard</h3>
+                  </a>
+              </li>
+              <li class="payment__method">
+                  <a href="#">
+                      <svg class="payment__method--icon">
+                          <use xlink:href="img/sprite.svg#maestro"></use>
+                      </svg>
+                      <h3 class="payment__method--name">Maestro</h3>
+                  </a>
+              </li>
+          </ul>
+         
+          <button class="btn">
+            <span>Next Step</span>
+            <svg class="icon-arrow">
+                <use xlink:href="img/sprite.svg#arrow"></use>
+            </svg>
+          </button>
+      </div>
+  </div>
+</body>
+</html>
