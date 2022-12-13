@@ -1,0 +1,29 @@
+.promo {
+  width: 400px;
+}
+
+.promo__title {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.promo__text {
+  margin-top: 50px;
+  border-left: 2px solid #333;
+  padding-left: 30px;
+  line-height: 20px;
+  opacity: 0.5;
+}
+
+.promo__button {
+  margin-top: 40px;
+}
+
+.promo_light {
+  color: #fff;
+}
+
+.promo_light .promo__text {
+  border-left-color: #fff;
+  opacity: 1;
+}

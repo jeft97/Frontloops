@@ -1,0 +1,14 @@
+.columns {
+  margin: 0 -40px;
+}
+
+.columns__item {
+  padding: 0 40px;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.columns__item_third {
+  width: 33.33%;
+}

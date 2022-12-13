@@ -1,0 +1,67 @@
+.hero {
+  background: #fff;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__top {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 40px;
+}
+
+.hero__logo {
+  flex-grow: 1;
+}
+
+.hero__logo-image {
+  width: 24px;
+}
+
+.hero__help {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 40px;
+}
+
+.hero__image {
+  position: absolute;
+  bottom: 0;
+  right: -20%;
+  max-height: 85%;
+}
+
+.hero__content {
+  min-height: 600px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero_runners {
+  background: url('../../img/runners.jpg') no-repeat 50%;
+  background-size: cover;
+}
+
+.hero_runners::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.hero_runners .hero__content {
+  justify-content: flex-end;
+}

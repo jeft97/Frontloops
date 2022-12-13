@@ -1,0 +1,8 @@
+.section {
+  padding: 40px 20px;
+  overflow: hidden;
+}
+
+.section_separeted {
+  border-top: 1px solid #dedede;
+}
