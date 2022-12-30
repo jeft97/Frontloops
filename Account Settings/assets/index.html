@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Account Settings - Step 2</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <section class="c-account-setting" role="dialog" aria-hidden="false" aria-labelledby="title-section">
+    <header class="c-account-setting__header">
+        <h2 id="title-section" class="heading--2">Account Settings</h2>
+        <button class="c-btn c-btn--close"  aria-label="close the Account Settings">x</button>
+    </header>
+    <main>
+      <form action="#" class="form">
+         <main class="form__main">
+            <div class="box-avatar">
+               <img src="img/avatar.jpg" alt="avatar of user" class="avatar-user">
+            </div>
+            <div class="group-form">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
+            </div>
+            <div class="group-form group-form--distint">
+                <div class="group-input">
+                  <label for="f-name">Fist Name</label>
+                  <input type="text" id="f-name" name="f-name" placeholder="Enter your first name">
+                </div>
+                <div class="group-input">
+                  <label for="l-name">Last Name</label>
+                  <input type="text" id="l-name" name="l-name" placeholder="Enter your last name">
+                </div>
+            </div>
+            <div class="group-form">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email">
+            </div>
+            <div class="group-form">
+                <label for="bio">Bio</label>
+                <textarea name="bio" id="bio" placeholder="Tell us about yourself"></textarea>
+            </div>
+         </main>
+         <footer class="form__footer">
+            <button type="reset" class="c-btn">Cancel</button>
+            <button type="submit"  class="c-btn">Save</button>
+         </footer>
+      </form>
+    </main>
+  </section>
+</body>
+</html>

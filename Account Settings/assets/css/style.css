@@ -1,0 +1,155 @@
+:root{
+    --color-bg:#2f2f2f;
+    --color-primary:#fdec51;
+
+    
+    --color-grey-dark:#939393;
+    --color-grey:#c8c8c8;
+    --color-grey-light-2:#f2f2f2;
+
+    --color-white:#fff;
+    --color-black:#000;
+}
+
+
+*,
+*::after,
+*::before{
+    margin:0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family:"Roboto", serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    background-color: var(--color-bg);
+    height: 100vh;
+
+    display: grid;
+    place-items: center;
+}
+
+.c-account-setting{
+    width: min(100%, 40rem);
+    min-height: 50rem;
+    background-color: var(--color-primary);
+    padding: 2.5rem 4rem 0 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4.5rem;
+
+}
+.heading--2{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.c-account-setting__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+.form{
+    padding-bottom: 2rem;
+}
+.form__main{
+    background-color: var(--color-white);
+    width: 40rem;
+    box-shadow:  0px 5px 15px 0px rgba(0, 0, 0, 0.4);
+
+    padding: 0 3rem 3rem 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.box-avatar{
+   transform: translateY(-3rem);
+}
+
+.avatar-user{
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.group-form{
+    border-bottom: 1.5px solid var(--color-grey);
+}
+.group-form:not(:last-child){
+    margin-bottom: 2rem;
+}
+.group-form:not(:nth-of-type(3)){
+    display: flex;
+    flex-direction: column;
+}
+
+.group-form--distint{
+    display: flex;
+    gap: 1rem;
+}
+.group-input{
+    width: calc(100% / 2);
+}
+.group-input>input{
+   width: 100%;
+   margin-top: .6rem;
+}
+
+input,
+input:focus,
+textarea,
+textarea:focus{
+    appearance: none;
+    border-radius: 0;
+    border: none;
+    font:inherit;
+    outline: none;
+    background-color: transparent;
+}
+label{
+    text-transform: uppercase;
+    color: var(--color-grey-dark);
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-bottom: .6rem;
+}
+
+.form__footer{
+    display: flex;
+    justify-content: flex-end;
+    gap: 3rem;
+}
+.c-btn,
+.c-btn:focus{
+    appearance: none;
+    border-radius: 0;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+
+}
+.c-btn{
+    opacity: .6;
+    transition: opacity .2s ease;
+}
+.c-btn:hover{
+    opacity: 1;
+}
+
+.c-btn--close{
+    font-weight: 600;
+}
