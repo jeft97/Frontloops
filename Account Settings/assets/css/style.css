@@ -3,7 +3,7 @@
     --color-primary:#fdec51;
 
     
-    --color-grey-dark:#939393;
+    --color-grey-dark:#767676;
     --color-grey:#c8c8c8;
     --color-grey-light-2:#d8ca47;
 
@@ -66,7 +66,7 @@ body{
 }
 .form__main{
     background-color: var(--color-white);
-    width: 40rem;
+    width: 42rem;
     box-shadow:  0px 5px 15px 0px rgba(0, 0, 0, 0.4);
 
     padding: 0 3rem 3rem 3rem;
@@ -93,7 +93,7 @@ body{
     content: "";
     display: block;
     position: absolute;
-    bottom: -.5rem;
+    bottom: 0;
     height: 1.5px;
    
     
@@ -153,6 +153,9 @@ textarea:focus{
     min-height: 8rem;
 }
 
+::placeholder{
+    font-size: 1.4rem;
+}
 input::placeholder,
 textarea::placeholder{
     transform: translate(0);
