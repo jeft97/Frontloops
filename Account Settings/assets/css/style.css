@@ -5,7 +5,7 @@
     
     --color-grey-dark:#939393;
     --color-grey:#c8c8c8;
-    --color-grey-light-2:#f2f2f2;
+    --color-grey-light-2:#d8ca47;
 
     --color-white:#fff;
     --color-black:#000;
@@ -75,6 +75,7 @@ body{
 
 .box-avatar{
    transform: translateY(-3rem);
+   display: inline-block;
 }
 
 .avatar-user{
@@ -82,10 +83,39 @@ body{
     width: 6rem;
     border-radius: 50%;
     object-fit: cover;
+
 }
 .group-form{
-    border-bottom: 1.5px solid var(--color-grey);
+    position: relative;
 }
+.group-form::after,
+.group-form::before{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -.5rem;
+    height: 1.5px;
+   
+    
+}
+
+.group-form::after{
+    width: 100%;
+    background-color: var(--color-grey-dark);
+}
+
+.group-form::before{
+    width: 0%;
+    z-index: 100;
+    background-color: var(--color-grey-dark);
+    transition: all .5s linear;
+}
+
+.group-form:has(input:focus, textarea:focus)::before{
+    width: 100%;
+    background-color: var(--color-grey-light-2);
+}
+
 .group-form:not(:last-child){
     margin-bottom: 2rem;
 }
@@ -117,6 +147,23 @@ textarea:focus{
     outline: none;
     background-color: transparent;
 }
+
+textarea,
+textarea:focus{
+    min-height: 8rem;
+}
+
+input::placeholder,
+textarea::placeholder{
+    transform: translate(0);
+    transition: transform .3s linear;
+}
+input:focus::placeholder,
+textarea:focus::placeholder{
+    transform: translateY(-4rem);
+}
+
+
 label{
     text-transform: uppercase;
     color: var(--color-grey-dark);
