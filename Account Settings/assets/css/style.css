@@ -49,7 +49,7 @@ body{
     gap: 4.5rem;
 
 }
-.heading--2{
+.heading--1{
     font-size: 2rem;
     font-weight: 500;
 }
@@ -150,7 +150,8 @@ textarea:focus{
 
 textarea,
 textarea:focus{
-    min-height: 8rem;
+    width: 100%;
+    min-height: 8.5rem;
 }
 
 ::placeholder{
@@ -199,7 +200,15 @@ label{
 .c-btn:hover{
     opacity: 1;
 }
-
 .c-btn--close{
     font-weight: 600;
+}
+.c-btn--close,
+.form__footer .c-btn{
+    outline-offset: 5px;
+}
+
+.c-btn--close:focus,
+.form__footer .c-btn:focus{
+   outline: 2px dotted var(--color-bg);
 }

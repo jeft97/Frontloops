@@ -11,38 +11,38 @@
 <body>
   <section class="c-account-setting" role="dialog" aria-hidden="false" aria-labelledby="title-section">
     <header class="c-account-setting__header">
-        <h2 id="title-section" class="heading--2">Account Settings</h2>
-        <button class="c-btn c-btn--close"  aria-label="close the Account Settings">x</button>
+        <h1 id="title-section" class="heading--1">Account Settings</h1>
+        <button class="c-btn c-btn--close"  aria-label="close modal Account Settings">x</button>
     </header>
     <main>
       <form action="#" class="form">
-         <main class="form__main">
+         <div class="form__main">
             <div class="box-avatar">
                <img src="img/avatar.jpg" alt="avatar of user" class="avatar-user">
             </div>
             <div class="group-form">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="Enter your username">
+                <input type="text" id="username" placeholder="Enter your username">
             </div>
             <div class="group-form group-form--distint">
                 <div class="group-input">
-                  <label for="f-name" id="label-f-name">Fist Name</label>
-                  <input type="text" id="f-name" aria-labelledby="label-f-name"  placeholder="Enter your first name">
+                  <label for="f-name">First Name</label>
+                  <input type="text" id="f-name"placeholder="Enter your first name">
                 </div>
                 <div class="group-input">
-                  <label for="l-name" id="label-l-name">Last Name</label>
-                  <input type="text" id="l-name" aria-labelledby="label-l-name" placeholder="Enter your last name">
+                  <label for="l-name">Last Name</label>
+                  <input type="text" id="l-name" placeholder="Enter your last name">
                 </div>
             </div>
             <div class="group-form">
-                <label for="email" id="label-email">Email</label>
-                <input type="email" id="email" aria-labelledby="label-email" placeholder="Enter your email">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
             </div>
             <div class="group-form">
-                <label for="bio" id="label-bio">Bio</label>
-                <textarea  id="bio" aria-labelledby="label-bio" placeholder="Tell us about yourself"></textarea>
+                <label for="bio">Bio</label>
+                <textarea  id="bio"placeholder="Tell us about yourself"></textarea>
             </div>
-         </main>
+         </div>
          <footer class="form__footer">
             <button type="reset" class="c-btn">Cancel</button>
             <button type="submit"  class="c-btn">Save</button>
