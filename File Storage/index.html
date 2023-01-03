@@ -4,11 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Loop 2 - Step 3</title>
+  <title>File Storage - Step 3</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-
+  <div class="wrapper">
+      <div class="c-file-storage">
+        <div class="c-file-storage__header">
+          <div class="cicle">
+            <img src="img/photo.svg" alt="" class="icon">
+          </div>
+          <button aria-controls="steps" aria-expanded="true" class="c-btn" aria-label="expand file store">
+            <img src="img/arrow.svg" alt="">
+          </button>
+        </div>
+        <div class="c-file-storage__steps" aria-hidden="false" id="steps">
+          <ul class="step">
+            <li class="step__list">
+              <div class="cicle">&nbsp;</div>
+              <a href="#" class="step__list--link">Holidays</a>
+            </li>
+            <li class="step__list">
+              <div class="cicle">&nbsp;</div>
+              <a href="#" class="step__list--link">Berlin</a>
+            </li>
+            <li class="step__list">
+              <div class="cicle">&nbsp;</div>
+              <a href="#" class="step__list--link">Summer vacation</a>
+            </li>
+            
+          </ul>
+        </div>
+        <div class="c-file-storage__footer">
+          <div class="cicle">
+            <img src="img/folder.svg" alt="" class="icon">
+          </div>
+        </div>
+      </div>
+  </div>
 </body>
 </html>
