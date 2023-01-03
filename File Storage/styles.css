@@ -49,7 +49,7 @@ body{
 }
 
 .c-file-storage{
-    width: min(100% - 2rem, 40rem);
+    width: min(100% - 2rem, 35rem);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
    
 }
