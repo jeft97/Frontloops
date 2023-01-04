@@ -1,0 +1,156 @@
+:root{
+    --clr-bg:#55557e;
+    --clr-primary:#3d3e52;
+    
+    --clr-white:#fff;
+    --clr-grey:rgb(233, 233, 233);
+    --clr-grey-dark:#a7a6a6;
+    --clr-black:#000;
+}
+*,
+*::after,
+**::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    background-color: var(--clr-bg);
+    
+}
+
+.wrapper{
+    display: grid;
+    place-items: center;
+
+}
+
+.container{
+    width: min(100%, 50rem);
+}
+
+.navigation{
+    display: flex;
+}
+
+.navigation__item{
+    list-style: none;
+    padding: 1.5rem 3rem;
+    background-color: var(--clr-primary);
+    cursor: pointer;
+}
+
+.navigation__item:not(:last-child){
+    border-right: 1.3px solid var(--clr-grey);
+}
+
+.navigation__item:not(:nth-of-type(3)){
+    opacity: .5;
+    background-color: #252525;
+
+}
+.navigation__item:hover:not(:nth-of-type(3)){
+    background-color: #252525b0;
+    opacity: 1;
+
+}
+
+.navigation__item.is-active{
+    opacity: 1;
+    transform: scale(1.2);
+    background-color: #252525;
+    border: none;
+}
+.is-active img{
+    opacity: 1;
+}
+
+
+
+
+
+.c-card{
+    width: min(100%, 32rem);
+    margin-inline: auto;
+    background-color: var(--clr-white);
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.c-card__header{
+    width: 100%;
+    height: 18rem;
+    position: relative;
+    color: var(--clr-white);
+    
+}
+
+
+.c-card__header--img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+}
+
+.c-card__header--title{
+    position: absolute;
+    top: 8rem;
+    left: 1.6rem;
+}
+
+.c-card__header--location{
+    position: absolute;
+    bottom: 2rem;
+    left: .9rem;
+    display: flex;
+    align-items: center;
+}
+.c-card__header--location span{
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.description-list{
+    display: initial;
+}
+
+.description-list div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    color: var(--clr-grey-dark);
+    cursor: pointer;
+}
+
+.description-list div:not(:last-child){
+    border-bottom:1.5px solid var(--clr-grey);
+}
+.description-list div dd{
+    transition: transform .2s; 
+}
+.description-list div:hover dd{
+   color:var(--clr-black) ;
+   transform: scale(1.3);
+}
+
+.description-list dt{
+    padding-left:2rem ;
+}
+.description-list dd{
+    padding-right: 2rem;
+}
