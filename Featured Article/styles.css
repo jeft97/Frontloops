@@ -1,0 +1,123 @@
+:root{
+    --clr-primary:rgba(225, 188, 56, 0.883);
+    --clr-white:#fff;
+    --clr-balck:#343a37;
+}
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    list-style: 1.5;
+
+}
+
+.feature{
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature__controlls{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.feature__controlls,
+.feature__content{
+    padding: 2.5rem 2rem;
+}
+
+.feature__controlls{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.c-btn,
+.c-btn:focus{
+    appearance: none;
+    display: inline;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--clr-white);
+    font-size: 1.8rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .2rem;
+}
+
+.c-btn img {
+    cursor: pointer;
+}
+
+.feature__content{
+    background-color: var(--clr-primary);
+    width: 45%;
+    height: 100%;
+    filter: brightness(110%);
+    clip-path: polygon(33% 0, 100% 0%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(33% 0, 100% 0%, 100% 100%, 0 100%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.content-main{
+    font-size: 3rem;
+    font-weight: 500;
+    width: 20ch;
+    text-align: end;
+}
+
+.heading--2{
+    font-size: 10rem;
+    font-weight: 400;
+}
+
+
+.content-views,
+.content-header a{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.content-views{
+    margin-top: -15rem;
+}
+
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--clr-balck);
+    font-weight: 500;
+}
+
