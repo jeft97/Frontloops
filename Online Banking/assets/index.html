@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Online Banking - Step 8</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="banking-container">
+      <!-- Header Of The Card-->
+      <div class="card-header">
+        <h1 class="heading--1">Card</h1>
+        <img src="img/card.png" alt="card of cliente" class="card--img">
+      </div>
+      <div class="card-main">
+                
+        <!-- All Options -->
+        <ul class="options">
+          <li class="options__item">
+            <img src="img/lock.svg" alt="icon" class="options__item--icon">
+            <div class="options__item--title">
+              <h2 class="heading--2">Lock card</h2>
+              <p class="subtitle">You can unlock it later</p>
+            </div>
+            <form action="#">
+              <input type="checkbox" id="i-lock">
+              <label for="i-lock" class="btn--check"></label>
+            </form>
+          </li>
+          <li class="options__item">
+            <img src="img/plane.svg" alt="icon" class="options__item--icon">
+            <div class="options__item--title">
+              <h2 class="heading--2">Payments abroad</h2>
+              <p class="subtitle">Enable your card abroad</p>
+            </div>
+            <form action="#">
+              <input type="checkbox" id="i-payment" hidden>
+              <label for="i-payment" class="btn--check"></label>
+            </form>
+          </li>
+          <li class="options__item">
+            <img src="img/laptop.svg" alt="icon" class="options__item--icon">
+            <div class="options__item--title">
+              <h2 class="heading--2">Online payments</h2>
+              <p class="subtitle">Enable online transactions</p>
+            </div>
+            <form action="#">
+              <input type="checkbox" id="i-online" hidden>
+              <label for="i-online" class="btn--check"></label>
+            </form>
+          </li>
+          <li class="options__item">
+            <img src="img/atm.svg" alt="icon" class="options__item--icon">
+            <div class="options__item--title">
+              <h2 class="heading--2">ATM withdrawals</h2>
+              <p class="subtitle">Enable ATM withdrawals</p>
+            </div>
+            <form action="#">
+              <input type="checkbox" id="i-atm" hidden>
+              <label for="i-atm" class="btn--check"></label>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
